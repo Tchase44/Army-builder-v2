@@ -2,11 +2,11 @@
 	<main>
 		<h1>Lizardmen Vue</h1>
 		<div>
-			<div v-on:click="" >Heroes</div>
-			<div v-on:click="" >Leaders</div>
-			<div v-on:click="" >Units</div>
+			<div v-on:click="changeShow(heroes)" >Heroes</div>
+			<div v-on:click="changeShow(leaders)" >Leaders</div>
+			<div v-on:click="changeShow(basic)" >Units</div>
 		</div>
-		<div v-show="false" v-for="person in heroes">
+		<div v-for="person in current">
 			<h3>{{person.name}}</h3>
 			<p>Health: {{person.wounds}}</p>
 			<p>Movement(inches): {{person.movement}}</p>
@@ -32,8 +32,15 @@
 				heroes: army.heroes,
 				leaders: army.leaders,
 				basic: army.basic,
+				current: null
+			}
+		},
+		methods:{
+			changeShow(value){
+				this.current = value
 			}
 		}
+
 	}
 </script>
 
