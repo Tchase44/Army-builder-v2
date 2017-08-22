@@ -1,0 +1,342 @@
+{
+	"heroes":[
+		{
+			"name":"Lord Kroak",
+			"wounds": "*",
+			"movement":5,
+			"bravery":10,
+			"save":"4+",
+			"weapons":[
+				{
+					"name":"spectral claws",
+					"type":"melee",
+					"range":3,
+					"attacks":"2D6",
+					"to hit": "3+",
+					"to wound": "3+",
+					"damage": "1"
+				}
+			]
+		},
+		{
+			"name":"Slann Mage Preist",
+			"wounds": 7,
+			"movement": 5,
+			"bravery": 10,
+			"save":"4+",
+			"weapons":[
+				{
+					"name":"Azure Lighting",
+					"type":"melee",
+					"range": 3,
+					"attacks": 6,
+					"to hit": "4+",
+					"to wound": "3+",
+					"damage":  1
+				}
+			]
+		},
+		{
+			"name":"Kroq-Gar on Carnosaur",
+			"wounds": "12",
+			"movement":"10",
+			"bravery":"10",
+			"save":"4+",
+			"weapons":[
+				{
+					"name":"Sunbolt Guntlent",
+					"type":"missle",
+					"range":"18",
+					"attacks":"D6",
+					"to hit": "3+",
+					"to wound": "4+",
+					"damage": "1"
+				},
+				{
+					"name":"Sunstone Spear",
+					"type":"melee",
+					"range":"2",
+					"attacks":"3",
+					"to hit": "3+",
+					"to wound": "4+",
+					"damage": "D3"
+				},
+				{
+					"name":"Carnosaur Clawed Forelimbs",
+					"type":"melee",
+					"range":"2",
+					"attacks":"2",
+					"to hit": "3+",
+					"to wound": "3+",
+					"damage": "2"
+				},
+				{
+					"name":"Carnosaur Massice Jaws",
+					"type":"melee",
+					"range":"2",
+					"attacks":"*",
+					"to hit": "4+",
+					"to wound": "3+",
+					"damage": "3"
+				}
+			]
+		},
+		{
+			"name":"Prophet of Sotek",
+			"wounds": "5",
+			"movement":"8",
+			"bravery":"10",
+			"save":"5+",
+			"weapons":[
+				{
+					"name":"Tide of Serpents",
+					"type":"missle",
+					"range":"8",
+					"attacks":"4",
+					"to hit": "5+",
+					"to wound": "4+",
+					"damage": "1"
+				},
+				{
+					"name":"Blade of the Serpent's Tounge",
+					"type":"melee",
+					"range":"2",
+					"attacks":"4",
+					"to hit": "3+",
+					"to wound": "4+",
+					"damage": "1"
+				}
+			]
+		}
+	],
+	"leaders": [
+		{
+			"name":"Saurus OldBlood",
+			"wounds": 7,
+			"movement": 5,
+			"bravery": 10,
+			"save":"4+",
+			"weapons":[
+				{
+					"name":"Suntooth Maul",
+					"type":"melee",
+					"range": "1",
+					"attacks": 2,
+					"to hit": "3+",
+					"to wound": "4+",
+					"damage": "D3"
+				},
+				{
+					"name":"Celestite War-Spear",
+					"type":"melee",
+					"range":"2",
+					"attacks":"4",
+					"to hit": "4+",
+					"to wound": "3+",
+					"damage": "1"
+				},
+				{
+					"name":"Fearsome Jaws and Stardrake Sheild",
+					"type":"melee",
+					"range":"1",
+					"attacks":"1",
+					"to hit": "4+",
+					"to wound": "3+",
+					"damage": "1"
+				}
+			]
+		},
+		{
+		"name":"Saurus OldBlood on Cold One",
+			"wounds": 7,
+			"movement": 10,
+			"bravery": 10,
+			"save":"4+",
+			"weapons":[
+				{
+					"name":"Celestite War-Pick",
+					"type":"melee",
+					"range":"1",
+					"attacks":"3",
+					"to hit": "3+",
+					"to wound": "3+",
+					"damage": "1"
+				},{
+					"name":"Fearsome Jaws and Stardrake Sheild",
+					"type":"melee",
+					"range":"1",
+					"attacks":"1",
+					"to hit": "4+",
+					"to wound": "3+",
+					"damage": "1"
+				},{
+					"name":"Cold One's Vicious Bite",
+					"type":"melee",
+					"range":"1",
+					"attacks":"2",
+					"to hit": "3+",
+					"to wound": "4+",
+					"damage": "1"
+				}
+			]
+		},
+		{
+		"name":"Scar Vetran with Battle Standard",
+			"wounds": 6,
+			"movement": 5,
+			"bravery": 10,
+			"save":"4+",
+			"weapons":[
+				{
+					"name":"Celestite War-Pick",
+					"type":"melee",
+					"range":"1",
+					"attacks":"3",
+					"to hit": "3+",
+					"to wound": "3+",
+					"damage": "1"
+				},{
+					"name":"Fearsome Jaws",
+					"type":"melee",
+					"range":"1",
+					"attacks":"1",
+					"to hit": "4+",
+					"to wound": "4+",
+					"damage": "1"
+				}
+			]
+		}
+	],
+	"basic": [
+		{
+		"name":"Saurus Warriors",
+			"wounds": "1",
+			"movement": 5,
+			"bravery": 10,
+			"save":"5+",
+			"weapons":[
+				{
+					"name":"Celestite Club",
+					"type":"melee",
+					"range":"1",
+					"attacks":"1",
+					"to hit": "4+",
+					"to wound": "3+",
+					"damage": "1"
+				},{
+					"name":"Fearsome Jaws and Stardrake Sheild",
+					"type":"melee",
+					"range":"1",
+					"attacks":"1",
+					"to hit": "5+",
+					"to wound": "4+",
+					"damage": "1"
+				},{
+					"name":"Celestite Spear",
+					"type":"melee",
+					"range":"2",
+					"attacks":"1",
+					"to hit": "4+",
+					"to wound": "4+",
+					"damage": "1"
+				}
+			]
+		},
+		{
+		"name":"Temple Gaurd",
+			"wounds": "1",
+			"movement": 5,
+			"bravery": 10,
+			"save":"4+",
+			"weapons":[
+				{
+					"name":"Celestite Polearm",
+					"type":"melee",
+					"range":"1",
+					"attacks":"2",
+					"to hit": "3+",
+					"to wound": "3+",
+					"damage": "1"
+				},{
+					"name":"Fearsome Jaws and Stardrake Sheild",
+					"type":"melee",
+					"range":"1",
+					"attacks":"1",
+					"to hit": "5+",
+					"to wound": "4+",
+					"damage": "1"
+				}
+			]
+		},
+		{
+		"name":"Saurus Calvalry",
+			"wounds": 2,
+			"movement": 7,
+			"bravery": 10,
+			"save":"5+",
+			"weapons":[
+				{
+					"name":"Celestite Lance",
+					"type":"melee",
+					"range":"1",
+					"attacks":"1",
+					"to hit": "3+",
+					"to wound": "3+",
+					"damage": "1"
+				},{
+					"name":"Fearsome Jaws and Stardrake Sheild",
+					"type":"melee",
+					"range":"1",
+					"attacks":"1",
+					"to hit": "5+",
+					"to wound": "4+",
+					"damage": "1"
+				},{
+					"name":"Cold One's Vicious Bite",
+					"type":"melee",
+					"range":"1",
+					"attacks":"2",
+					"to hit": "3+",
+					"to wound": "4+",
+					"damage": "1"
+				}
+			]
+		},
+		{
+		"name":"Skinks",
+			"wounds": 6,
+			"movement": 5,
+			"bravery": 10,
+			"save":"4+",
+			"weapons":[
+				{
+					"name":"Meteoric Javelin",
+					"type":"missle",
+					"range":"8",
+					"attacks":"1",
+					"to hit": "5+",
+					"to wound": "4+",
+					"damage": "1"
+				},
+				{
+					"name":"Blowgun",
+					"type":"missle",
+					"range":"16",
+					"attacks":"1",
+					"to hit": "5+",
+					"to wound": "5+",
+					"damage": "1"
+				},
+				{
+					"name":"Moonstone Club",
+					"type":"melee",
+					"range":"1",
+					"attacks":"1",
+					"to hit": "5+",
+					"to wound": "4+",
+					"damage": "1"
+				}
+			]
+		}
+	]
+}
