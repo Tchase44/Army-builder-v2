@@ -1,13 +1,13 @@
-const mongoose = require('mongoose')
+let mongoose = require('mongoose')
 
 // Schema needed?
 
-const armySchema = new mongoose.Schema({
+let ArmySchema = new mongoose.Schema({
 	army: Object,
 })
 
-mongoose.model("Army", armySchema)
+mongoose.model("Army",ArmySchema)
 mongoose.connect("mongodb://localhost/lizardmen")
 
-module.exports = mongoose;
+module.exports = mongoose
 

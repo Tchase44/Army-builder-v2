@@ -71,7 +71,7 @@
 					"damage": "2"
 				},
 				{
-					"name":"Carnosaur Massice Jaws",
+					"name":"Carnosaur Massive Jaws",
 					"type":"melee",
 					"range":"2",
 					"attacks":"*",
