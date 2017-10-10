@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="carousel-view">
 		<transition-group class="carousel" tag="div">
 			<div 
 				v-for="slide in slides"
@@ -55,4 +55,36 @@
 </script>
 
 
-<style scoped></style>
+<style scoped>
+	.carousel-view{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.carousel{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+
+		width: ;
+		min-height: ;
+	}
+	.slide{
+		flex:;
+		height: ;
+		margin: ;
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		transition: transform 0.3s ease-in-out;
+	}
+	.slide:first-of-type{
+		opacity: 0;
+	}
+	.slide:last-of-type{
+		opacity: 0;
+	}
+</style>

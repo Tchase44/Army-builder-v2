@@ -1,6 +1,7 @@
 <template>
 	<main>
 		<h1>Lizardmen Vue</h1>
+		<h2>{{apiArmy[0].heroes[0].name}}</h2>
 		<div>
 			<div v-on:click="changeShow(heroes)" >Heroes</div>
 			<div v-on:click="changeShow(leaders)" >Leaders</div>
@@ -25,20 +26,41 @@
 
 <script>
 	import army from "./assets/lizardmen"
+	import axios from "axios"
 	export default {
 		name: "units",
 		data() {
 			return {
+				apiArmy: null,
 				heroes: army.heroes,
 				leaders: army.leaders,
 				basic: army.basic,
-				current: null
+				current: null,
+				errors: []
 			}
 		},
+
+		created() {
+			axios.get(`http://localhost:8000/api/lizardmen.json`)
+			.then(response => {
+				this.apiArmy = response.data
+			})
+			.catch(e => {
+				this.errors.push(e)
+			})
+		},
+		// ready: function(){
+		// 	this.getArmy()
+		// },
+
 		methods:{
 			changeShow(value){
 				this.current = value
 			}
+			// getArmy(){
+				
+			// }
+
 		}
 
 	}

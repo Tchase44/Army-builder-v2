@@ -1,11 +1,13 @@
 <template>
-  <div id="app">
+  <div id="appp">
+    <upper></upper>
     <units></units>
   </div>
 </template>
 
 <script>
 import Units from "./Units.vue"
+import Upper from "./Header.vue"
 
 export default {
   name: 'app',
@@ -21,7 +23,7 @@ export default {
 </script>
 
 <style>
-#app {
+#appp {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   /*-webkit-font-smoothing: antialiased;*/
   /*-moz-osx-font-smoothing: grayscale;*/
