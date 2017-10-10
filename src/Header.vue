@@ -10,8 +10,8 @@
 			</div>
 		</transition-group>
 		<div class="carousel-controls">
-			<button class="carousel-controls_button" @click="next">Next</button>
-			<button class="carousel-controls_button" @click="last">Last</button>
+			<button class="carousel-controls_button" @click="last">{{left}}</button>
+			<button class="carousel-controls_button" @click="next">{{right}}</button>
 		</div>
 	</div>
 </template>
@@ -29,7 +29,7 @@
 					title: "I'm a Slide Two",
 					id: 22
 				},{
-					title: "I'm a Slide Three",
+					title: "I'm a Slide You See First",
 					id: 33
 				},{
 					title: "I'm a Slide Four",
@@ -38,7 +38,9 @@
 					title: "I'm a Slide Five",
 					id: 55
 				}
-				]
+				],
+				left: "<",
+				right: ">"
 			}
 		},
 		methods: {
@@ -55,31 +57,30 @@
 </script>
 
 
-<style scoped>
+<style>
 	.carousel-view{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		height:100px;
 	}
 	.carousel{
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		overflow: hidden;
-
-		width: ;
-		min-height: ;
+		width: 24em;
 	}
 	.slide{
-		flex:;
-		height: ;
-		margin: ;
+		flex: 0 0 20em;
+		height: 20em;
+		margin: 1em ;
 		
 		display: flex;
 		justify-content: center;
 		align-items: center;
 
-		transition: transform 0.3s ease-in-out;
+		transition: transform 0.8s ease-in-out;
 	}
 	.slide:first-of-type{
 		opacity: 0;

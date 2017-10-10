@@ -9,15 +9,21 @@ app.set("port", process.env.PORT || 8000 )
 
 // app.use("/assets",express.static("src"))
 
-app.get("/api/Lizardmen", (req,res)=>{
+app.all('/*', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+ });
+
+app.get("/api/lizardmen.json", (req,res)=>{
 	Army.find({}).then(function (data) {
 		res.json(data)
 	})
 })
 
-// app.get("/*", (req, res)=>{
-//   res.sendFile(__dirname + "/src/index.html");
-// });
+app.get("/*", (req, res)=>{
+  res.sendFile(__dirname + "/src/index.html");
+});
 
 app.listen(app.get("port"),function(){
 	console.log("Lord Korak awaits on port 8000")

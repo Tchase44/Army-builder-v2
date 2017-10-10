@@ -1,23 +1,25 @@
 <template>
 	<main>
 		<h1>Lizardmen Vue</h1>
-		<h2>{{apiArmy[0].heroes[0].name}}</h2>
+<!-- 		<h2>{{apiArmy[0].heroes[0].name}}</h2> -->
 		<div>
 			<div v-on:click="changeShow(heroes)" >Heroes</div>
 			<div v-on:click="changeShow(leaders)" >Leaders</div>
 			<div v-on:click="changeShow(basic)" >Units</div>
 		</div>
-		<div v-for="person in current">
-			<h3>{{person.name}}</h3>
-			<p>Health: {{person.wounds}}</p>
-			<p>Movement(inches): {{person.movement}}</p>
-			<p>Bravery: {{person.bravery}}</p>
-			<p>Save: {{person.save}}</p>
-			<h4>Weapons</h4>
-			<div v-for="weapons in person.weapons">
-				<h5>{{weapons.name}}</h5>
-				<p>Damage: {{weapons.damage}}</p>
-				<p>Range: {{weapons.range}}</p>
+		<div v-for="person in current" class="boxes" :key="person.name" >
+			<div class="model">
+				<h3>{{person.name}}</h3>
+				<p>Health: {{person.wounds}}</p>
+				<p>Movement(inches): {{person.movement}}</p>
+				<p>Bravery: {{person.bravery}}</p>
+				<p>Save: {{person.save}}</p>
+				<h4>Weapons</h4>
+				<div v-for="weapons in person.weapons">
+					<h5>{{weapons.name}}</h5>
+					<p>Damage: {{weapons.damage}}</p>
+					<p>Range: {{weapons.range}}</p>
+				</div>
 			</div>
 		</div>	
 	</main>
@@ -66,6 +68,19 @@
 	}
 </script>
 
-<style scoped>
-	
+<style>
+	main{
+		text-align: center;
+	}
+	.boxes{
+		width: 100%;
+		margin: 0 auto;
+	}
+	.model{
+		border:1px solid black;
+		display: inline-block;
+		float: left;
+		margin: 1px;
+		/*padding: 2px;*/
+	}
 </style>
