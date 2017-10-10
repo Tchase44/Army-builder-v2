@@ -21,10 +21,36 @@
 		name: "header",
 		data(){
 			return {
-
+				slides: [
+				{
+					title: "I'm a Slide One",
+					id: 11
+				},{
+					title: "I'm a Slide Two",
+					id: 22
+				},{
+					title: "I'm a Slide Three",
+					id: 33
+				},{
+					title: "I'm a Slide Four",
+					id: 44
+				},{
+					title: "I'm a Slide Five",
+					id: 55
+				}
+				]
 			}
 		},
-		methods: {}
+		methods: {
+			next () {
+				const first = this.slides.shift()
+				this.slides = this.slides.concat(first)
+			},
+			last () {
+				const last = this.slides.pop()
+				this.slides = [last].concat(this.slides)
+			}
+		}
 	}
 </script>
 
