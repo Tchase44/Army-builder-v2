@@ -1,10 +1,24 @@
 const express = require("express")
 const mongoose = require("./db/connection.js")
-
+const expressVue = require("express-vue")
+const path = require('path')
+// express init
 let app = express()
+//
+const vueOptions = {
+	rootPath: path.join(__dirname,''),
+	layout:{
+		start:'<div id="app">',
+		end: '</div>'
+	}
+}
+// express-vue init
+const expressVueMiddleware = expressVue.init(vueOptions)
+app.use(expressVueMiddleware)
 
+// set up  mongoose/mongo
 let Army = mongoose.model("Army")
-
+// port
 app.set("port", process.env.PORT || 8000 )
 
 // app.use("/assets",express.static("src"))
