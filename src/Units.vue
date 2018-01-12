@@ -7,6 +7,7 @@
 			<div v-on:click="changeShow(leaders)" >Leaders</div>
 			<div v-on:click="changeShow(basic)" >Units</div>
 		</div>
+		<div class="contain">
 		<div v-for="person in current" class="boxes" :key="person.name" >
 			<div class="model">
 				<h3>{{person.name}}</h3>
@@ -21,6 +22,7 @@
 					<p>Range: {{weapons.range}}</p>
 				</div>
 			</div>
+		</div>
 		</div>	
 	</main>
 	
@@ -72,15 +74,16 @@
 	main{
 		text-align: center;
 	}
-	.boxes{
+	.contain{
 		width: 100%;
-		margin: 0 auto;
+		padding: 0;
 	}
-	.model{
+	.boxes{
+		text-align: center;
 		border:1px solid black;
 		display: inline-block;
-		float: left;
-		margin: 1px;
-		/*padding: 2px;*/
+		margin: 5px;
+		padding: 2px;
+		vertical-align: top;
 	}
 </style>

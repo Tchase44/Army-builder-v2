@@ -22,7 +22,7 @@ app.get("/api/lizardmen.json", (req,res)=>{
 })
 
 app.get("/*", (req, res)=>{
-  res.sendFile(__dirname + "/src/index.html");
+  res.sendFile(__dirname + "/index.html");
 });
 
 app.listen(app.get("port"),function(){
