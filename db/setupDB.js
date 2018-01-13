@@ -49,8 +49,8 @@ seedData.heroes.forEach((unit,idx) => {
 
 })
 
-seedData.leaders.weapons.forEach((weapon,idx)=>{
-    let stuff = []
+seedData.leaders.forEach((unit,idx)=>{
+    let officerWeapons = []
     unit.weapons.forEach((weapon, idx) => {
         stuff.push(new Weapon({
             name: weapon.name,
@@ -70,13 +70,13 @@ seedData.leaders.weapons.forEach((weapon,idx)=>{
         movement: unit.movement,
         bravery: unit.bravery,
         save: unit.save,
-        weapons: stuff
+        weapons: officerWeapons
     })
     )
 })
 
-seedData.basic.weapons.forEach((weapon,idx)=>{
-    let stuff = []
+seedData.basic.forEach((unit,idx)=>{
+    let infantryWeapons = []
     unit.weapons.forEach((weapon, idx) => {
         stuff.push(new Weapon({
             name: weapon.name,
@@ -96,7 +96,7 @@ seedData.basic.weapons.forEach((weapon,idx)=>{
         movement: unit.movement,
         bravery: unit.bravery,
         save: unit.save,
-        weapons: stuff
+        weapons: infantryWeapons
     })
     )
 })
