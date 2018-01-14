@@ -1,5 +1,6 @@
 const express = require("express")
 const mongoose = require("./db/connection.js")
+// const mongoose = require("./db/setupDB")
 
 let app = express()
 

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const Weapon = mongoose.Schema({
+const Weapon = new mongoose.Schema({
     name: {
         type: String
     },
@@ -27,4 +27,5 @@ const Weapon = mongoose.Schema({
     }
 })
 
-mongoose.model("weapon", Weapon)
+mongoose.model("Weapon", Weapon)
+module.exports = mongoose

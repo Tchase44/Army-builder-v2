@@ -12,8 +12,8 @@
 					"type":"melee",
 					"range":3,
 					"attacks":"2D6",
-					"to hit": "3+",
-					"to wound": "3+",
+					"to_hit": "3+",
+					"to_wound": "3+",
 					"damage": "1"
 				}
 			]
@@ -30,8 +30,8 @@
 					"type":"melee",
 					"range": 3,
 					"attacks": 6,
-					"to hit": "4+",
-					"to wound": "3+",
+					"to_hit": "4+",
+					"to_wound": "3+",
 					"damage":  1
 				}
 			]
@@ -41,15 +41,15 @@
 			"wounds": "12",
 			"movement":"10",
 			"bravery":"10",
-			"save":"4+",
+			"_save":"4+",
 			"weapons":[
 				{
 					"name":"Sunbolt Guntlent",
 					"type":"missle",
 					"range":"18",
 					"attacks":"D6",
-					"to hit": "3+",
-					"to wound": "4+",
+					"to_hit": "3+",
+					"to_wound": "4+",
 					"damage": "1"
 				},
 				{
@@ -57,8 +57,8 @@
 					"type":"melee",
 					"range":"2",
 					"attacks":"3",
-					"to hit": "3+",
-					"to wound": "4+",
+					"to_hit": "3+",
+					"to_wound": "4+",
 					"damage": "D3"
 				},
 				{
@@ -66,8 +66,8 @@
 					"type":"melee",
 					"range":"2",
 					"attacks":"2",
-					"to hit": "3+",
-					"to wound": "3+",
+					"to_hit": "3+",
+					"to_wound": "3+",
 					"damage": "2"
 				},
 				{
@@ -75,8 +75,8 @@
 					"type":"melee",
 					"range":"2",
 					"attacks":"*",
-					"to hit": "4+",
-					"to wound": "3+",
+					"to_hit": "4+",
+					"to_wound": "3+",
 					"damage": "3"
 				}
 			]
@@ -93,8 +93,8 @@
 					"type":"missle",
 					"range":"8",
 					"attacks":"4",
-					"to hit": "5+",
-					"to wound": "4+",
+					"to_hit": "5+",
+					"to_wound": "4+",
 					"damage": "1"
 				},
 				{
@@ -102,8 +102,8 @@
 					"type":"melee",
 					"range":"2",
 					"attacks":"4",
-					"to hit": "3+",
-					"to wound": "4+",
+					"to_hit": "3+",
+					"to_wound": "4+",
 					"damage": "1"
 				}
 			]
@@ -122,8 +122,8 @@
 					"type":"melee",
 					"range": "1",
 					"attacks": 2,
-					"to hit": "3+",
-					"to wound": "4+",
+					"to_hit": "3+",
+					"to_wound": "4+",
 					"damage": "D3"
 				},
 				{
@@ -131,8 +131,8 @@
 					"type":"melee",
 					"range":"2",
 					"attacks":"4",
-					"to hit": "4+",
-					"to wound": "3+",
+					"to_hit": "4+",
+					"to_wound": "3+",
 					"damage": "1"
 				},
 				{
@@ -140,8 +140,8 @@
 					"type":"melee",
 					"range":"1",
 					"attacks":"1",
-					"to hit": "4+",
-					"to wound": "3+",
+					"to_hit": "4+",
+					"to_wound": "3+",
 					"damage": "1"
 				}
 			]
@@ -158,24 +158,24 @@
 					"type":"melee",
 					"range":"1",
 					"attacks":"3",
-					"to hit": "3+",
-					"to wound": "3+",
+					"to_hit": "3+",
+					"to_wound": "3+",
 					"damage": "1"
 				},{
 					"name":"Fearsome Jaws and Stardrake Sheild",
 					"type":"melee",
 					"range":"1",
 					"attacks":"1",
-					"to hit": "4+",
-					"to wound": "3+",
+					"to_hit": "4+",
+					"to_wound": "3+",
 					"damage": "1"
 				},{
 					"name":"Cold One's Vicious Bite",
 					"type":"melee",
 					"range":"1",
 					"attacks":"2",
-					"to hit": "3+",
-					"to wound": "4+",
+					"to_hit": "3+",
+					"to_wound": "4+",
 					"damage": "1"
 				}
 			]
@@ -192,16 +192,16 @@
 					"type":"melee",
 					"range":"1",
 					"attacks":"3",
-					"to hit": "3+",
-					"to wound": "3+",
+					"to_hit": "3+",
+					"to_wound": "3+",
 					"damage": "1"
 				},{
 					"name":"Fearsome Jaws",
 					"type":"melee",
 					"range":"1",
 					"attacks":"1",
-					"to hit": "4+",
-					"to wound": "4+",
+					"to_hit": "4+",
+					"to_wound": "4+",
 					"damage": "1"
 				}
 			]
@@ -220,24 +220,24 @@
 					"type":"melee",
 					"range":"1",
 					"attacks":"1",
-					"to hit": "4+",
-					"to wound": "3+",
+					"to_hit": "4+",
+					"to_wound": "3+",
 					"damage": "1"
 				},{
 					"name":"Fearsome Jaws and Stardrake Sheild",
 					"type":"melee",
 					"range":"1",
 					"attacks":"1",
-					"to hit": "5+",
-					"to wound": "4+",
+					"to_hit": "5+",
+					"to_wound": "4+",
 					"damage": "1"
 				},{
 					"name":"Celestite Spear",
 					"type":"melee",
 					"range":"2",
 					"attacks":"1",
-					"to hit": "4+",
-					"to wound": "4+",
+					"to_hit": "4+",
+					"to_wound": "4+",
 					"damage": "1"
 				}
 			]
@@ -254,16 +254,16 @@
 					"type":"melee",
 					"range":"1",
 					"attacks":"2",
-					"to hit": "3+",
-					"to wound": "3+",
+					"to_hit": "3+",
+					"to_wound": "3+",
 					"damage": "1"
 				},{
 					"name":"Fearsome Jaws and Stardrake Sheild",
 					"type":"melee",
 					"range":"1",
 					"attacks":"1",
-					"to hit": "5+",
-					"to wound": "4+",
+					"to_hit": "5+",
+					"to_wound": "4+",
 					"damage": "1"
 				}
 			]
@@ -280,24 +280,24 @@
 					"type":"melee",
 					"range":"1",
 					"attacks":"1",
-					"to hit": "3+",
-					"to wound": "3+",
+					"to_hit": "3+",
+					"to_wound": "3+",
 					"damage": "1"
 				},{
 					"name":"Fearsome Jaws and Stardrake Sheild",
 					"type":"melee",
 					"range":"1",
 					"attacks":"1",
-					"to hit": "5+",
-					"to wound": "4+",
+					"to_hit": "5+",
+					"to_wound": "4+",
 					"damage": "1"
 				},{
 					"name":"Cold One's Vicious Bite",
 					"type":"melee",
 					"range":"1",
 					"attacks":"2",
-					"to hit": "3+",
-					"to wound": "4+",
+					"to_hit": "3+",
+					"to_wound": "4+",
 					"damage": "1"
 				}
 			]
@@ -314,8 +314,8 @@
 					"type":"missle",
 					"range":"8",
 					"attacks":"1",
-					"to hit": "5+",
-					"to wound": "4+",
+					"to_hit": "5+",
+					"to_wound": "4+",
 					"damage": "1"
 				},
 				{
@@ -323,8 +323,8 @@
 					"type":"missle",
 					"range":"16",
 					"attacks":"1",
-					"to hit": "5+",
-					"to wound": "5+",
+					"to_hit": "5+",
+					"to_wound": "5+",
 					"damage": "1"
 				},
 				{
@@ -332,8 +332,8 @@
 					"type":"melee",
 					"range":"1",
 					"attacks":"1",
-					"to hit": "5+",
-					"to wound": "4+",
+					"to_hit": "5+",
+					"to_wound": "4+",
 					"damage": "1"
 				}
 			]

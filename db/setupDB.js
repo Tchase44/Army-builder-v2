@@ -1,26 +1,13 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose'),
+      weaponImport = require('./models/weapon'),
+      unitImport = require('./models/unit'),
+      armyImport = require('./models/army');
 const Unit = mongoose.model("Unit")
+const ArmyModel = mongoose.model("Army")
 const Weapon = mongoose.model("Weapon")
-const Army = mongoose.model("Army")
 const seedData = require('./lizardmen.json')
 // mongoose.connect("mongodb://localhost/lizardmen")
-mongoose.Promise = Promise;
 
-mongoose.connect("mongodb://localhost/lizardmen", {
-    useMongoClient: true,
-    promiseLibrary: global.Promise
-});
-
-database.on('error', error => console.log(`Connection to BudgetManager database failed: ${error}`));
-database.on('connected', () => console.log(`Connected to BudgetManager database`));
-database.on('disconnected', () => console.log(`Disconnected from BudgetManager database`));
-
-process.on('SIGINT', () => {
-    database.close(() => {
-        console.log(`BudgetManager terminated, connection closed`)
-        process.exit(0)
-    })
-});
 let units  = []
 seedData.heroes.forEach((unit,idx) => {
     let stuff = []
@@ -37,7 +24,7 @@ seedData.heroes.forEach((unit,idx) => {
         )
     })
     units.push(new Unit({
-        rank: hero,
+        rank: 'hero',
         name: unit.name,
         wounds: unit.wounds,
         movement: unit.movement,
@@ -52,7 +39,7 @@ seedData.heroes.forEach((unit,idx) => {
 seedData.leaders.forEach((unit,idx)=>{
     let officerWeapons = []
     unit.weapons.forEach((weapon, idx) => {
-        stuff.push(new Weapon({
+        officerWeapons.push(new Weapon({
             name: weapon.name,
             combat_type: weapon.combat_type,
             range: weapon.range,
@@ -64,7 +51,7 @@ seedData.leaders.forEach((unit,idx)=>{
         )
     })
     units.push(new Unit({
-        rank: leader,
+        rank: 'leader',
         name: unit.name,
         wounds: unit.wounds,
         movement: unit.movement,
@@ -78,7 +65,7 @@ seedData.leaders.forEach((unit,idx)=>{
 seedData.basic.forEach((unit,idx)=>{
     let infantryWeapons = []
     unit.weapons.forEach((weapon, idx) => {
-        stuff.push(new Weapon({
+        infantryWeapons.push(new Weapon({
             name: weapon.name,
             combat_type: weapon.combat_type,
             range: weapon.range,
@@ -90,7 +77,7 @@ seedData.basic.forEach((unit,idx)=>{
         )
     })
     units.push(new Unit({
-        rank: basic,
+        rank: 'basic',
         name: unit.name,
         wounds: unit.wounds,
         movement: unit.movement,
@@ -100,10 +87,15 @@ seedData.basic.forEach((unit,idx)=>{
     })
     )
 })
- 
-
+let Army = new ArmyModel({
+    name: "Lizardmen",
+    army: []
+})
+mongoose.connect('mongodb://localhost/lizardmen2')
 Army.remove({}).then(() => {
-    Army.collection.insert(units).then(() => {
+    units.forEach((unit)=>{
+        Army.collection.insert(unit)
+    }).then(() => {
         console.log('Seeds Inserted')
         process.exit()
     })

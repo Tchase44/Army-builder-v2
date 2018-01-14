@@ -1,31 +1,5 @@
-const mongoose = require('mongoose')
-
-const Weapon = new mongoose.Schema({
-    name: {
-        type: String
-    },
-    type: {
-        type: String
-    },
-    range: {
-        type: String
-    },
-    attacks: {
-        type: String
-    },
-    to hit: {
-        type: String
-    },
-    to wound: {
-        type: String
-    },
-    damage: {
-        type: String
-    }
-    unit_id: {
-        type: mongoose.Schema.Types.ObjectId
-    }
-})
+const mongoose = require('mongoose'),
+      Weapon = require('./weapon')
 
 const Unit = new mongoose.Schema({
     rank:{
@@ -48,14 +22,15 @@ const Unit = new mongoose.Schema({
         type: String,
         required: true
     },
-    save: {
+    _save: {
         type: String,
         required: true
     },
-    weapons: [Weapon],
+    weapons: [],
     army_id: {
         type: mongoose.Schema.Types.ObjectId
     }
 })
 
 mongoose.model("Unit",Unit)
+module.exports = mongoose
