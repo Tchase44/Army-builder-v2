@@ -41,7 +41,7 @@
 			"wounds": "12",
 			"movement":"10",
 			"bravery":"10",
-			"_save":"4+",
+			"save":"4+",
 			"weapons":[
 				{
 					"name":"Sunbolt Guntlent",
