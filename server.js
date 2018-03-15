@@ -1,10 +1,10 @@
-// for deploytment
+// for deployment
 const express = require('express')
 const path = require('path')
 const serveStatic = require('serve-static')
 
 app = express()
-// vue biulds the website in the dist folder
+// vue builds the website in the dist folder
 app.use(serveStatic(__dirname + '/dist'))
 
 let port  = process.env.PORT || 5000

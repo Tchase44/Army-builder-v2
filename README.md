@@ -2,6 +2,23 @@
 
 > A Vue.js project
 
+## Dev Setup
+```bash
+# Backend server
+nodemon index.js
+# => :8000
+
+# Front-End server
+npm run dev # OR
+yarn run dev
+# => :8080
+```
+## Seeding
+```bash
+node /db/setupDb.js
+```
+
+
 ## Build Setup
 
 ``` bash
