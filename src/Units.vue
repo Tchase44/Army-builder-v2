@@ -16,10 +16,10 @@
 				<p>Bravery: {{person.bravery}}</p>
 				<p>Save: {{person.save}}</p>
 				<h4>Weapons</h4>
-				<div v-for="weapons in person.weapons">
-					<h5>{{weapons.name}}</h5>
-					<p>Damage: {{weapons.damage}}</p>
-					<p>Range: {{weapons.range}}</p>
+				<div v-for="weapon in person.weapons" v-bind:key="weapon._id">
+					<h5>{{weapon.name}}</h5>
+					<p>Damage: {{weapon.damage}}</p>
+					<p>Range: {{weapon.range}}</p>
 				</div>
 			</div>
 		</div>
@@ -29,16 +29,16 @@
 </template>
 
 <script>
-	import army from "./assets/lizardmen"
+	// import army from "./assets/lizardmen"
 	import axios from "axios"
 	export default {
 		name: "units",
 		data() {
 			return {
 				apiArmy: null,
-				heroes: army.heroes,
-				leaders: army.leaders,
-				basic: army.basic,
+				heroes: [],
+				leaders: [],
+				basic: [],
 				current: null,
 				errors: []
 			}
@@ -48,6 +48,19 @@
 			axios.get(`http://localhost:8000/api/lizardmen.json`)
 			.then(response => {
 				this.apiArmy = response.data
+				this.apiArmy.forEach(unit => {
+					switch (unit.rank) {
+						case "hero":
+							this.heroes.push(unit)
+							break;
+						case "leader":
+							this.leaders.push(unit)
+							break;
+						case "basic":
+							this.basic.push(unit)
+							break;
+					}
+				});
 			})
 			.catch(e => {
 				this.errors.push(e)

@@ -1,6 +1,8 @@
 const express = require("express")
+// const mongoose = require('mongoose')
 const mongoose = require("./db/connection.js")
 // const mongoose = require("./db/setupDB")
+// mongoose.connect("mongodb://localhost/lizardmen2")
 
 let app = express()
 
@@ -22,9 +24,9 @@ app.get("/api/lizardmen.json", (req,res)=>{
 	})
 })
 
-app.get("/*", (req, res)=>{
-  res.sendFile(__dirname + "/index.html");
-});
+// app.get("/*", (req, res)=>{
+//   res.sendFile(__dirname + "/index.html");
+// });
 
 app.listen(app.get("port"),function(){
 	console.log("Lord Korak awaits on port 8000")

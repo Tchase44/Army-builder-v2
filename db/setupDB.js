@@ -88,8 +88,7 @@ seedData.basic.forEach((unit,idx)=>{
     )
 })
 let Army = new ArmyModel({
-    name: "Lizardmen",
-    army: []
+    name: "Lizardmen"
 })
 mongoose.connect('mongodb://localhost/lizardmen2')
 Army.remove({}).then(() => {
