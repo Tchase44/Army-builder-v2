@@ -1,12 +1,11 @@
 <template>
   <div id="appp">
     <upper></upper>
-    <units></units>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Units from "./Units.vue"
 import Upper from "./Header.vue"
 
 export default {
@@ -17,7 +16,6 @@ export default {
     }
   },
   components: {
-    Units,
     Upper
   }
 }
