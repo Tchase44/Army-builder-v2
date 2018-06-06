@@ -14,7 +14,7 @@ export default {
     return {
     }
   },
-  created:{
+  // created:{
     // findUnit() {
     //   army.forEach( (arrayOfUnits)=> {
     //     arrayOfUnits.filter( (unitObj) => {
@@ -22,7 +22,7 @@ export default {
     //     })
     //   })
     // }
-  },
+  // },
   methods: {
   }
 }

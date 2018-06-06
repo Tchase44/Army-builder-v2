@@ -1,7 +1,7 @@
 <template>
-	<main>
+	<main class="main">
 		<h1>Lizardmen Vue</h1>
-<!-- 		<h2>{{apiArmy[0].heroes[0].name}}</h2> -->
+		<!-- <h2>{{apiArmy[0].heroes[0].name}}</h2> -->
 		<div>
 			<div v-on:click="changeShow(heroes)" >Heroes</div>
 			<div v-on:click="changeShow(leaders)" >Leaders</div>
@@ -10,27 +10,29 @@
 		<div class="contain">
 		<div v-for="person in current" class="boxes" :key="person.name" >
 			<div class="model">
-				<h3>{{person.name}}</h3>
-				<p>Health: {{person.wounds}}</p>
-				<p>Movement(inches): {{person.movement}}</p>
-				<p>Bravery: {{person.bravery}}</p>
-				<p>Save: {{person.save}}</p>
-				<h4>Weapons</h4>
-				<div v-for="weapon in person.weapons" v-bind:key="weapon._id">
-					<h5>{{weapon.name}}</h5>
-					<p>Damage: {{weapon.damage}}</p>
-					<p>Range: {{weapon.range}}</p>
-				</div>
+				<router-link :to="{ path: person.name }" v-bind:name="person.name">
+					<h3>{{person.name}}</h3>
+					<p>Health: {{person.wounds}}</p>
+					<p>Movement(inches): {{person.movement}}</p>
+					<p>Bravery: {{person.bravery}}</p>
+					<p>Save: {{person.save}}</p>
+					<h4>Weapons</h4>
+					<div v-for="weapon in person.weapons" v-bind:key="weapon._id">
+						<h5>{{weapon.name}}</h5>
+						<p>Damage: {{weapon.damage}}</p>
+						<p>Range: {{weapon.range}}</p>
+					</div>
+				</router-link>
 			</div>
 		</div>
 		</div>	
 	</main>
-	
 </template>
 
 <script>
 	// import army from "./assets/lizardmen"
 	import axios from "axios"
+	import voca from "voca"
 	export default {
 		name: "units",
 		data() {
@@ -39,11 +41,11 @@
 				heroes: [],
 				leaders: [],
 				basic: [],
+				all: [].concat(heroes,leaders,basic),
 				current: null,
 				errors: []
 			}
 		},
-
 		created() {
 			axios.get(`http://localhost:8000/api/lizardmen.json`)
 			.then(response => {
@@ -66,26 +68,26 @@
 				this.errors.push(e)
 			})
 		},
-		// ready: function(){
-		// 	this.getArmy()
-		// },
-
 		methods:{
 			changeShow(value){
 				this.current = value
+			},
+			
+			urlSafe(value){
+				let pathname = voca.slugify(value)
+				return `/${pathname}`
 			}
-			// getArmy(){
-				
-			// }
-
 		}
-
 	}
 </script>
 
-<style>
+<style scoped>
 	main{
 		text-align: center;
+	}
+	a{
+		text-decoration: none;
+		color: #000;
 	}
 	.contain{
 		width: 100%;
