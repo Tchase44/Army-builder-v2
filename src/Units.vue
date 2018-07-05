@@ -3,12 +3,15 @@
 		<h1>Lizardmen Vue</h1>
 		<!-- <h2>{{apiArmy[0].heroes[0].name}}</h2> -->
 		<div>
-			<div v-on:click="changeShow(heroes)" >Heroes</div>
-			<div v-on:click="changeShow(leaders)" >Leaders</div>
-			<div v-on:click="changeShow(basic)" >Units</div>
+			<div @click="changeShow(all)" >All</div>
+			<div @click="changeShow(heroes)" >Heroes</div>
+			<div @click="changeShow(leaders)" >Leaders</div>
+			<div @click="changeShow(basic)" >Units</div>
 		</div>
 		<div class="contain">
-		<div v-for="person in current" class="boxes" :key="person.name" >
+		<div v-for="person in current"
+				 class="boxes"
+				 :key="person.name" >
 			<div class="model">
 				<router-link :to="{ path: person.name }" v-bind:name="person.name">
 					<h3>{{person.name}}</h3>
@@ -25,7 +28,7 @@
 				</router-link>
 			</div>
 		</div>
-		</div>	
+		</div>
 	</main>
 </template>
 
@@ -38,10 +41,10 @@
 		data() {
 			return {
 				apiArmy: null,
-				heroes: [],
-				leaders: [],
-				basic: [],
-				all: [].concat(heroes,leaders,basic),
+				heroes: null,
+				leaders: null,
+				basic: null,
+				all: null,
 				current: null,
 				errors: []
 			}
@@ -50,6 +53,10 @@
 			axios.get(`http://localhost:8000/api/lizardmen.json`)
 			.then(response => {
 				this.apiArmy = response.data
+				this.heroes = []
+				this.leaders = []
+				this.basic = []
+				this.all = this.apiArmy
 				this.apiArmy.forEach(unit => {
 					switch (unit.rank) {
 						case "hero":
@@ -72,9 +79,9 @@
 			changeShow(value){
 				this.current = value
 			},
-			
+
 			urlSafe(value){
-				let pathname = voca.slugify(value)
+				let pathname = voca.kebabCase(value)
 				return `/${pathname}`
 			}
 		}
