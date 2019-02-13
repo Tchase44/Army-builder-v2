@@ -4,6 +4,9 @@ const Weapon = new mongoose.Schema({
     name: {
         type: String
     },
+    url_name: {
+        type: String
+    },
     combat_type: {
         type: String
     },

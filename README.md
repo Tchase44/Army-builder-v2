@@ -33,3 +33,12 @@ npm run build
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+## Assess Mongo on Windows through WSL
+
+`/c/Program\ Files/MongoDB/Server/4.0/bin/mongo.exe`
+`/c/Program\ Files/MongoDB/Server/4.0/bin/mongod.exe`
+
+npm run dev
+node index.js

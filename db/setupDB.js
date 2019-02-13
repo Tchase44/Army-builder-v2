@@ -14,6 +14,7 @@ seedData.heroes.forEach((unit,idx) => {
     unit.weapons.forEach((weapon, idx) => {
         stuff.push(new Weapon({
             name: weapon.name,
+            url_name: weapon.url_name,
             combat_type: weapon.combat_type,
             range: weapon.range,
             attacks: weapon.attacks,
@@ -26,6 +27,7 @@ seedData.heroes.forEach((unit,idx) => {
     units.push(new Unit({
         rank: 'hero',
         name: unit.name,
+        url_name: unit.url_name,
         wounds: unit.wounds,
         movement: unit.movement,
         bravery: unit.bravery,
@@ -41,6 +43,7 @@ seedData.leaders.forEach((unit,idx)=>{
     unit.weapons.forEach((weapon, idx) => {
         officerWeapons.push(new Weapon({
             name: weapon.name,
+            url_name: weapon.url_name,
             combat_type: weapon.combat_type,
             range: weapon.range,
             attacks: weapon.attacks,
@@ -53,6 +56,7 @@ seedData.leaders.forEach((unit,idx)=>{
     units.push(new Unit({
         rank: 'leader',
         name: unit.name,
+        url_name: unit.url_name,
         wounds: unit.wounds,
         movement: unit.movement,
         bravery: unit.bravery,
@@ -67,6 +71,7 @@ seedData.basic.forEach((unit,idx)=>{
     unit.weapons.forEach((weapon, idx) => {
         infantryWeapons.push(new Weapon({
             name: weapon.name,
+            url_name: weapon.url_name,
             combat_type: weapon.combat_type,
             range: weapon.range,
             attacks: weapon.attacks,
@@ -79,6 +84,7 @@ seedData.basic.forEach((unit,idx)=>{
     units.push(new Unit({
         rank: 'basic',
         name: unit.name,
+        url_name: unit.url_name,
         wounds: unit.wounds,
         movement: unit.movement,
         bravery: unit.bravery,
@@ -90,10 +96,14 @@ seedData.basic.forEach((unit,idx)=>{
 let Army = new ArmyModel({
     name: "Lizardmen"
 })
+let Units = new Unit({
+    name: "Lizardmen"
+})
 mongoose.connect('mongodb://localhost/lizardmen2')
 Army.remove({}).then(() => {
     units.forEach((unit)=>{
-        Army.collection.insert(unit)
+      Unit.collection.insert(unit)
+        // Army.collection.insert(unit)
     }).then(() => {
         console.log('Seeds Inserted')
         process.exit()

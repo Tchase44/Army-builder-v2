@@ -8,7 +8,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {path: '/', component: Units},
-  {path: "/:name", component: Show, props: true}
+  {path: "/:url_name", component: Show, props: true}
 ]
 const router = new VueRouter({
   routes

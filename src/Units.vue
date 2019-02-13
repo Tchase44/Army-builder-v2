@@ -13,18 +13,12 @@
 				 class="boxes"
 				 :key="person.name" >
 			<div class="model">
-				<router-link :to="{ path: person.name }" v-bind:name="person.name">
+				<router-link :to="{ path: person.url_name }" v-bind:name="person.url_name">
 					<h3>{{person.name}}</h3>
 					<p>Health: {{person.wounds}}</p>
 					<p>Movement(inches): {{person.movement}}</p>
 					<p>Bravery: {{person.bravery}}</p>
-					<p>Save: {{person.save}}</p>
-					<h4>Weapons</h4>
-					<div v-for="weapon in person.weapons" v-bind:key="weapon._id">
-						<h5>{{weapon.name}}</h5>
-						<p>Damage: {{weapon.damage}}</p>
-						<p>Range: {{weapon.range}}</p>
-					</div>
+					<p>Save: {{person.ssave}}</p>
 				</router-link>
 			</div>
 		</div>
@@ -35,7 +29,7 @@
 <script>
 	// import army from "./assets/lizardmen"
 	import axios from "axios"
-	import voca from "voca"
+
 	export default {
 		name: "units",
 		data() {
@@ -73,16 +67,11 @@
 			})
 			.catch(e => {
 				this.errors.push(e)
-			})
+      })
 		},
 		methods:{
 			changeShow(value){
 				this.current = value
-			},
-
-			urlSafe(value){
-				let pathname = voca.kebabCase(value)
-				return `/${pathname}`
 			}
 		}
 	}

@@ -7,6 +7,7 @@ const mongoose = require("./db/connection.js")
 let app = express()
 
 let Army = mongoose.model("Army")
+let Unit = mongoose.model("Unit")
 
 app.set("port", process.env.PORT || 8000 )
 
@@ -20,6 +21,11 @@ app.all('/*', function(req, res, next) {
 
 app.get("/api/lizardmen.json", (req,res)=>{
 	Army.find({}).then(function (data) {
+		res.json(data)
+	})
+})
+app.get("/api/lizardmen/:url_name.json", (req,res)=>{
+	Unit.findOne({url_name: req.params.url_name}).then(function (data) {
 		res.json(data)
 	})
 })

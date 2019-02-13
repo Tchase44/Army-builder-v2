@@ -2,108 +2,124 @@
 	"heroes":[
 		{
 			"name":"Lord Kroak",
-			"wounds": "*",
+			"url_name":"lord_kroak",
+      "rank":"General",
+      "wounds": "*",
 			"movement":5,
 			"bravery":10,
 			"save":"4+",
 			"weapons":[
 				{
 					"name":"spectral claws",
+					"url_name":"spectral_claws",
 					"type":"melee",
 					"range":3,
 					"attacks":"2D6",
-					"to_hit": "3+",
-					"to_wound": "3+",
+					"to hit": "3+",
+					"to wound": "3+",
 					"damage": "1"
 				}
 			]
 		},
 		{
 			"name":"Slann Mage Preist",
-			"wounds": 7,
+			"url_name":"slann_mage_preist",
+      "rank":"General",
+      "wounds": 7,
 			"movement": 5,
 			"bravery": 10,
 			"save":"4+",
 			"weapons":[
 				{
 					"name":"Azure Lighting",
+					"url_name":"Azure_Lighting",
 					"type":"melee",
 					"range": 3,
 					"attacks": 6,
-					"to_hit": "4+",
-					"to_wound": "3+",
+					"to hit": "4+",
+					"to wound": "3+",
 					"damage":  1
 				}
 			]
 		},
 		{
 			"name":"Kroq-Gar on Carnosaur",
-			"wounds": "12",
+			"url_name":"Kroq-Gar_on_Carnosaur",
+      "rank":"General",
+      "wounds": "12",
 			"movement":"10",
 			"bravery":"10",
-			"_save":"4+",
+			"save":"4+",
 			"weapons":[
 				{
 					"name":"Sunbolt Guntlent",
+					"url_name":"Sunbolt_Guntlent",
 					"type":"missle",
 					"range":"18",
 					"attacks":"D6",
-					"to_hit": "3+",
-					"to_wound": "4+",
+					"to hit": "3+",
+					"to wound": "4+",
 					"damage": "1"
 				},
 				{
 					"name":"Sunstone Spear",
+					"url_name":"Sunstone_Spear",
 					"type":"melee",
 					"range":"2",
 					"attacks":"3",
-					"to_hit": "3+",
-					"to_wound": "4+",
+					"to hit": "3+",
+					"to wound": "4+",
 					"damage": "D3"
 				},
 				{
 					"name":"Carnosaur Clawed Forelimbs",
+					"url_name":"Carnosaur_Clawed_Forelimbs",
 					"type":"melee",
 					"range":"2",
 					"attacks":"2",
-					"to_hit": "3+",
-					"to_wound": "3+",
+					"to hit": "3+",
+					"to wound": "3+",
 					"damage": "2"
 				},
 				{
-					"name":"Carnosaur Massive Jaws",
+					"name":"Carnosaur Massice Jaws",
+					"url_name":"Carnosaur_Massice_Jaws",
 					"type":"melee",
 					"range":"2",
 					"attacks":"*",
-					"to_hit": "4+",
-					"to_wound": "3+",
+					"to hit": "4+",
+					"to wound": "3+",
 					"damage": "3"
 				}
 			]
 		},
 		{
 			"name":"Prophet of Sotek",
-			"wounds": "5",
+			"url_name":"Prophet_of_Sotek",
+      "rank":"General",
+      "wounds": "5",
 			"movement":"8",
 			"bravery":"10",
 			"save":"5+",
 			"weapons":[
 				{
 					"name":"Tide of Serpents",
+					"url_name":"Tide_of_Serpents",
 					"type":"missle",
 					"range":"8",
 					"attacks":"4",
-					"to_hit": "5+",
-					"to_wound": "4+",
+					"to hit": "5+",
+					"to wound": "4+",
 					"damage": "1"
 				},
 				{
 					"name":"Blade of the Serpent's Tounge",
+					"url_name":"Blade_of_the_Serpents_Tounge",
 					"type":"melee",
 					"range":"2",
 					"attacks":"4",
-					"to_hit": "3+",
-					"to_wound": "4+",
+					"to hit": "3+",
+					"to wound": "4+",
 					"damage": "1"
 				}
 			]
@@ -112,6 +128,8 @@
 	"leaders": [
 		{
 			"name":"Saurus OldBlood",
+			"url_name":"Saurus_OldBlood",
+      "rank":"leader",
 			"wounds": 7,
 			"movement": 5,
 			"bravery": 10,
@@ -119,89 +137,101 @@
 			"weapons":[
 				{
 					"name":"Suntooth Maul",
+					"url_name":"Suntooth_Maul",
 					"type":"melee",
-					"range": "1",
+					"range": 1,
 					"attacks": 2,
-					"to_hit": "3+",
-					"to_wound": "4+",
+					"to hit": "3+",
+					"to wound": "4+",
 					"damage": "D3"
 				},
 				{
 					"name":"Celestite War-Spear",
+					"url_name":"Celestite_War-Spear",
 					"type":"melee",
 					"range":"2",
 					"attacks":"4",
-					"to_hit": "4+",
-					"to_wound": "3+",
+					"to hit": "4+",
+					"to wound": "3+",
 					"damage": "1"
 				},
 				{
 					"name":"Fearsome Jaws and Stardrake Sheild",
+					"url_name":"Fearsome Jaws and Stardrake Sheild",
 					"type":"melee",
 					"range":"1",
 					"attacks":"1",
-					"to_hit": "4+",
-					"to_wound": "3+",
+					"to hit": "4+",
+					"to wound": "3+",
 					"damage": "1"
 				}
 			]
 		},
 		{
 		"name":"Saurus OldBlood on Cold One",
-			"wounds": 7,
+		"url_name":"Saurus_OldBlood_on_Cold_One",
+      "rank":"leader",
+      "wounds": 7,
 			"movement": 10,
 			"bravery": 10,
 			"save":"4+",
 			"weapons":[
 				{
 					"name":"Celestite War-Pick",
+					"url_name":"Celestite_War-Pick",
 					"type":"melee",
 					"range":"1",
 					"attacks":"3",
-					"to_hit": "3+",
-					"to_wound": "3+",
+					"to hit": "3+",
+					"to wound": "3+",
 					"damage": "1"
 				},{
 					"name":"Fearsome Jaws and Stardrake Sheild",
+					"url_name":"Fearsome_Jaws_and_Stardrake_Sheild",
 					"type":"melee",
 					"range":"1",
 					"attacks":"1",
-					"to_hit": "4+",
-					"to_wound": "3+",
+					"to hit": "4+",
+					"to wound": "3+",
 					"damage": "1"
 				},{
 					"name":"Cold One's Vicious Bite",
+					"url_name":"Cold_Ones_Vicious_Bite",
 					"type":"melee",
 					"range":"1",
 					"attacks":"2",
-					"to_hit": "3+",
-					"to_wound": "4+",
+					"to hit": "3+",
+					"to wound": "4+",
 					"damage": "1"
 				}
 			]
 		},
 		{
 		"name":"Scar Vetran with Battle Standard",
-			"wounds": 6,
+		"url_name":"Scar_Vetran_with_Battle_Standard",
+      "rank":"leader",
+      "wounds": 6,
 			"movement": 5,
 			"bravery": 10,
 			"save":"4+",
 			"weapons":[
 				{
 					"name":"Celestite War-Pick",
+					"url_name":"Celestite_War-Pick",
 					"type":"melee",
 					"range":"1",
 					"attacks":"3",
-					"to_hit": "3+",
-					"to_wound": "3+",
+					"to hit": "3+",
+					"to wound": "3+",
 					"damage": "1"
 				},{
 					"name":"Fearsome Jaws",
+					"url_name":"Fearsome_Jaws",
 					"type":"melee",
 					"range":"1",
 					"attacks":"1",
-					"to_hit": "4+",
-					"to_wound": "4+",
+					"to hit": "4+",
+					"to wound": "4+",
 					"damage": "1"
 				}
 			]
@@ -210,130 +240,149 @@
 	"basic": [
 		{
 		"name":"Saurus Warriors",
-			"wounds": "1",
+		"url_name":"Saurus_Warriors",
+    "rank":"infantry",
+    "wounds": 1,
 			"movement": 5,
 			"bravery": 10,
 			"save":"5+",
 			"weapons":[
 				{
 					"name":"Celestite Club",
+					"url_name":"Celestite_Club",
 					"type":"melee",
 					"range":"1",
 					"attacks":"1",
-					"to_hit": "4+",
-					"to_wound": "3+",
+					"to hit": "4+",
+					"to wound": "3+",
 					"damage": "1"
 				},{
 					"name":"Fearsome Jaws and Stardrake Sheild",
+					"url_name":"Fearsome_Jaws_and_Stardrake_Sheild",
 					"type":"melee",
 					"range":"1",
 					"attacks":"1",
-					"to_hit": "5+",
-					"to_wound": "4+",
+					"to hit": "5+",
+					"to wound": "4+",
 					"damage": "1"
 				},{
 					"name":"Celestite Spear",
+					"url_name":"Celestite_Spear",
 					"type":"melee",
 					"range":"2",
 					"attacks":"1",
-					"to_hit": "4+",
-					"to_wound": "4+",
+					"to hit": "4+",
+					"to wound": "4+",
 					"damage": "1"
 				}
 			]
 		},
 		{
 		"name":"Temple Gaurd",
-			"wounds": "1",
+		"url_name":"Temple_Gaurd",
+    "rank":"infantry",
+    "wounds": 1,
 			"movement": 5,
 			"bravery": 10,
 			"save":"4+",
 			"weapons":[
 				{
 					"name":"Celestite Polearm",
+					"url_name":"Celestite_Polearm",
 					"type":"melee",
 					"range":"1",
 					"attacks":"2",
-					"to_hit": "3+",
-					"to_wound": "3+",
+					"to hit": "3+",
+					"to wound": "3+",
 					"damage": "1"
 				},{
 					"name":"Fearsome Jaws and Stardrake Sheild",
+					"url_name":"Fearsome_Jaws_and_Stardrake_Sheild",
 					"type":"melee",
 					"range":"1",
 					"attacks":"1",
-					"to_hit": "5+",
-					"to_wound": "4+",
+					"to hit": "5+",
+					"to wound": "4+",
 					"damage": "1"
 				}
 			]
 		},
 		{
 		"name":"Saurus Calvalry",
-			"wounds": 2,
+		"url_name":"Saurus_Calvalry",
+    "rank":"infantry",
+    "wounds": 2,
 			"movement": 7,
 			"bravery": 10,
 			"save":"5+",
 			"weapons":[
 				{
 					"name":"Celestite Lance",
+					"url_name":"Celestite_Lance",
 					"type":"melee",
 					"range":"1",
 					"attacks":"1",
-					"to_hit": "3+",
-					"to_wound": "3+",
+					"to hit": "3+",
+					"to wound": "3+",
 					"damage": "1"
 				},{
 					"name":"Fearsome Jaws and Stardrake Sheild",
+					"url_name":"Fearsome_Jaws_and_Stardrake_Sheild",
 					"type":"melee",
 					"range":"1",
 					"attacks":"1",
-					"to_hit": "5+",
-					"to_wound": "4+",
+					"to hit": "5+",
+					"to wound": "4+",
 					"damage": "1"
 				},{
 					"name":"Cold One's Vicious Bite",
+					"url_name":"Cold_Ones_Vicious_Bite",
 					"type":"melee",
 					"range":"1",
 					"attacks":"2",
-					"to_hit": "3+",
-					"to_wound": "4+",
+					"to hit": "3+",
+					"to wound": "4+",
 					"damage": "1"
 				}
 			]
 		},
 		{
 		"name":"Skinks",
-			"wounds": 6,
+		"url_name":"Skinks",
+    "rank":"infantry" ,
+    "wounds": 6,
 			"movement": 5,
 			"bravery": 10,
 			"save":"4+",
 			"weapons":[
 				{
 					"name":"Meteoric Javelin",
+					"url_name":"Meteoric_Javelin",
 					"type":"missle",
 					"range":"8",
 					"attacks":"1",
-					"to_hit": "5+",
-					"to_wound": "4+",
+					"to hit": "5+",
+					"to wound": "4+",
 					"damage": "1"
 				},
 				{
 					"name":"Blowgun",
+					"url_name":"Blowgun",
 					"type":"missle",
 					"range":"16",
 					"attacks":"1",
-					"to_hit": "5+",
-					"to_wound": "5+",
+					"to hit": "5+",
+					"to wound": "5+",
 					"damage": "1"
 				},
 				{
 					"name":"Moonstone Club",
+					"url_name":"Moonstone_Club",
 					"type":"melee",
 					"range":"1",
 					"attacks":"1",
-					"to_hit": "5+",
-					"to_wound": "4+",
+					"to hit": "5+",
+					"to wound": "4+",
 					"damage": "1"
 				}
 			]

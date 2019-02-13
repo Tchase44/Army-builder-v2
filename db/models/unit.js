@@ -10,6 +10,10 @@ const Unit = new mongoose.Schema({
         type: String,
         required: true
     },
+    url_name: {
+        type: String,
+        required: true
+    },
     wounds:{
         type: String,
         required: true
@@ -22,7 +26,7 @@ const Unit = new mongoose.Schema({
         type: String,
         required: true
     },
-    _save: {
+    ssave: {
         type: String,
         required: true
     },
