@@ -1,12 +1,24 @@
 <template>
   <div class="show">
-    <h3>url: {{url_name}}</h3>
-
     <h3>{{name}}</h3>
-    <p>Health: {{wounds}}</p>
-    <p>Movement(inches): {{movement}}</p>
-    <p>Bravery: {{bravery}}</p>
-    <p>Save: {{ssave}}</p>
+      <div class="box">
+        <div class="health">
+          <span class="stat">Health:</span><br>
+          <span class="value">{{wounds}}</span>
+        </div>
+        <div class="move">
+          <span class="stat">Movement:</span><br>
+          <span class="value">{{movement}} in</span>
+        </div>
+        <div class="brave">
+          <span class="stat">Bravery:</span><br>
+          <span class="value">{{bravery}}</span>
+        </div>
+        <div class="ssave">
+          <span class="stat">Save:</span><br>
+          <span class="value">{{ssave}}</span>
+        </div>
+      </div>
 
     <h4>Weapons</h4>
     <div v-for="weapon in unit.weapons" v-bind:key="weapon.url_name">
@@ -70,5 +82,28 @@ export default {
 </script>
 
 <style scoped>
+div{
+  display: inline-block;
+}
 
+.stat{
+  font-weight: bolder;
+}
+
+.value{
+  font-size: 120%;
+}
+
+.box{
+  display: grid;
+  width: 200px;
+  height: 150px;
+  border: 1px solid #000;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+.box div{
+  border: 1px solid #000;
+  text-align: center;
+}
 </style>

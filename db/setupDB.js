@@ -31,7 +31,7 @@ seedData.heroes.forEach((unit,idx) => {
         wounds: unit.wounds,
         movement: unit.movement,
         bravery: unit.bravery,
-        save: unit.save,
+        ssave: unit.save,
         weapons: stuff
         })
     )
@@ -60,7 +60,7 @@ seedData.leaders.forEach((unit,idx)=>{
         wounds: unit.wounds,
         movement: unit.movement,
         bravery: unit.bravery,
-        save: unit.save,
+        ssave: unit.save,
         weapons: officerWeapons
     })
     )
@@ -88,7 +88,7 @@ seedData.basic.forEach((unit,idx)=>{
         wounds: unit.wounds,
         movement: unit.movement,
         bravery: unit.bravery,
-        save: unit.save,
+        ssave: unit.save,
         weapons: infantryWeapons
     })
     )
@@ -103,7 +103,7 @@ mongoose.connect('mongodb://localhost/lizardmen2')
 Army.remove({}).then(() => {
     units.forEach((unit)=>{
       Unit.collection.insert(unit)
-        // Army.collection.insert(unit)
+        Army.collection.insert(unit)
     }).then(() => {
         console.log('Seeds Inserted')
         process.exit()
