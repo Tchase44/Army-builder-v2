@@ -7,7 +7,7 @@ import Show from './Show.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  {path: '/', component: Units},
+  {path: '/', component: Units, name: "home"},
   {path: "/:url_name", component: Show, props: true}
 ]
 const router = new VueRouter({

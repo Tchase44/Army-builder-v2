@@ -1,7 +1,7 @@
 <template>
 	<div class="carousel-view">
 		<transition-group class="carousel" tag="div">
-			<div 
+			<div
 				v-for="slide in slides"
 				class="slide"
 				:key="slide.id">
@@ -84,7 +84,7 @@
 		flex: 0 0 20em;
 		height: 20em;
 		margin: 1em ;
-		
+
 		display: flex;
 		justify-content: center;
 		align-items: center;

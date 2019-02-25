@@ -1,5 +1,6 @@
 <template>
   <div id="appp">
+    <bigtitle></bigtitle>
     <upper></upper>
     <router-view></router-view>
   </div>
@@ -7,6 +8,7 @@
 
 <script>
 import Upper from "./Header.vue"
+import bigtitle from "./BigTitle.vue"
 
 export default {
   name: 'app',
@@ -16,7 +18,8 @@ export default {
     }
   },
   components: {
-    Upper
+    Upper,
+    bigtitle
   }
 }
 </script>

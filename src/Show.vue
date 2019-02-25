@@ -21,8 +21,31 @@
       </div>
 
     <h4>Weapons</h4>
-    <div v-for="weapon in unit.weapons" v-bind:key="weapon.url_name">
-      <p>{{weapon.name}}</p>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <td>Name</td>
+            <td>combat style</td>
+            <td>range(inches)</td>
+            <td>attacks</td>
+            <td>to hit</td>
+            <td>to wound</td>
+            <td>damage</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="weapon in unit.weapons" v-bind:key="weapon.url_name">
+            <td>{{weapon.name}}</td>
+            <td>{{weapon.combat_type}}</td>
+            <td>{{weapon.range}}</td>
+            <td>{{weapon.attacks}}</td>
+            <td>{{weapon.to_hit}}</td>
+            <td>{{weapon.to_wound}}</td>
+            <td>{{weapon.damage}}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
     <h4>Errors</h4>
@@ -57,25 +80,9 @@ export default {
       this.movement = unit.movement
       this.bravery = unit.bravery
       this.ssave = unit.ssave
-      // this.something = props.url_name
       console.log(this.unit)
     })
   },
-  // watch:{
-  //   url_name: function(val){
-  //     axios.get(`http://localhost:8000/api/lizardmen/${url_name}.json`).then(res => {
-  //       this.unit = res.data
-  //     })
-  //     .catch(e => {
-  //       this.errors.push(e)
-  //     })
-  //   }
-  // },
-  // computed:{
-  //   getProps(){
-  //     return this.$props
-  //   }
-  // },
   methods: {
   }
 }

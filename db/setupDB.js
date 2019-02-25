@@ -15,7 +15,7 @@ seedData.heroes.forEach((unit,idx) => {
         stuff.push(new Weapon({
             name: weapon.name,
             url_name: weapon.url_name,
-            combat_type: weapon.combat_type,
+            combat_type: weapon.type,
             range: weapon.range,
             attacks: weapon.attacks,
             to_hit: weapon.to_hit,
@@ -44,7 +44,7 @@ seedData.leaders.forEach((unit,idx)=>{
         officerWeapons.push(new Weapon({
             name: weapon.name,
             url_name: weapon.url_name,
-            combat_type: weapon.combat_type,
+            combat_type: weapon.type,
             range: weapon.range,
             attacks: weapon.attacks,
             to_hit: weapon.to_hit,
@@ -72,7 +72,7 @@ seedData.basic.forEach((unit,idx)=>{
         infantryWeapons.push(new Weapon({
             name: weapon.name,
             url_name: weapon.url_name,
-            combat_type: weapon.combat_type,
+            combat_type: weapon.type,
             range: weapon.range,
             attacks: weapon.attacks,
             to_hit: weapon.to_hit,

@@ -1,7 +1,5 @@
 <template>
 	<main class="main">
-		<h1>Lizardmen Vue</h1>
-		<!-- <h2>{{apiArmy[0].heroes[0].name}}</h2> -->
 		<div>
 			<div @click="changeShow(all)" >All</div>
 			<div @click="changeShow(heroes)" >Heroes</div>
