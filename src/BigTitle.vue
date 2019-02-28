@@ -1,13 +1,13 @@
 <template>
   <div class="big-title">
-    <h1><router-link to="/">Lizardmen</router-link></h1>
+    <h1><router-link to="/" v-bind:msg="msg">Lizardmen</router-link></h1>
   </div>
 </template>
 
 <script>
 	export default {
 		name: "bigtitle",
-		data(){
+		data() {
 			return {
         msg: "a title"
 			}
@@ -16,12 +16,13 @@
 </script>
 
 
-<style>
-  .big-title{
+<style scoped>
+  .big-title {
     width: 100%;
     text-align: center;
   }
-  h1,a{
+
+  h1, a {
     text-decoration: none;
     color: #000;
   }

@@ -6,6 +6,10 @@ const Unit = new mongoose.Schema({
         type: String,
         required: true
     },
+    race:{
+        type: String,
+        required: true
+    },
     name: {
         type: String,
         required: true
@@ -30,10 +34,7 @@ const Unit = new mongoose.Schema({
         type: String,
         required: true
     },
-    weapons: [],
-    army_id: {
-        type: mongoose.Schema.Types.ObjectId
-    }
+    weapons: []
 })
 
 mongoose.model("Unit",Unit)

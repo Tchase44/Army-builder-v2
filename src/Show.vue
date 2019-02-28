@@ -92,25 +92,88 @@ export default {
 div{
   display: inline-block;
 }
-
-.stat{
-  font-weight: bolder;
-}
-
-.value{
-  font-size: 120%;
-}
-
+/* circle stats */
 .box{
   display: grid;
   width: 200px;
-  height: 150px;
-  border: 1px solid #000;
+  height: 200px;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
 }
 .box div{
   border: 1px solid #000;
   text-align: center;
+}
+.health{
+  border-radius: 100px 0 0 0;
+}
+
+.move{
+  border-radius: 0 100px 0 0;
+}
+
+.brave{
+  border-radius: 0 0 0 100px;
+}
+
+.ssave{
+  border-radius: 0 0 100px 0;
+}
+/* interrior circle */
+.stat{
+  font-weight: bolder;
+}
+.value{
+  font-size: 140%;
+}
+/* labels */
+.health .stat {
+  display: block;
+  transform: rotate(-50deg);
+  position: relative;
+  top:30px;
+  right:10px;
+}
+.move .stat {
+  display: block;
+  transform: rotate(45deg);
+  position: relative;
+  top:35px;
+  left:5px;
+}
+.brave .stat {
+  display: block;
+  transform: rotate(-130deg);
+  position: relative;
+  top:45px;
+  right:10px;
+}
+.ssave .stat {
+  display: block;
+  transform: rotate(130deg);
+  position: relative;
+  top:50px;
+  left:10px;
+}
+/* stats values */
+.health .value {
+  position: relative;
+  top:30px;
+  left: 20px;
+}
+.move .value {
+  position: relative;
+  top: 30px;
+  right:20px;
+}
+.brave .value {
+  position: relative;
+  bottom:20px;
+  left:20px;
+}
+.ssave .value {
+  position: relative;
+  bottom: 20px;
+  right: 20px;
 }
 </style>

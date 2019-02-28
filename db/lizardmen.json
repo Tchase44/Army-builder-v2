@@ -1,13 +1,14 @@
 {
-	"heroes":[
+	"all":[
 		{
 			"name":"Lord Kroak",
 			"url_name":"lord_kroak",
       "rank":"General",
+      "race": "Lizardmen",
       "wounds": "*",
 			"movement":5,
 			"bravery":10,
-			"save":"4+",
+      "save":"4+",
 			"weapons":[
 				{
 					"name":"spectral claws",
@@ -25,6 +26,7 @@
 			"name":"Slann Mage Preist",
 			"url_name":"slann_mage_preist",
       "rank":"General",
+      "race": "Lizardmen",
       "wounds": 7,
 			"movement": 5,
 			"bravery": 10,
@@ -46,6 +48,7 @@
 			"name":"Kroq-Gar on Carnosaur",
 			"url_name":"Kroq-Gar_on_Carnosaur",
       "rank":"General",
+      "race": "Lizardmen",
       "wounds": "12",
 			"movement":"10",
 			"bravery":"10",
@@ -82,8 +85,8 @@
 					"damage": "2"
 				},
 				{
-					"name":"Carnosaur Massice Jaws",
-					"url_name":"Carnosaur_Massice_Jaws",
+					"name":"Carnosaur Massive Jaws",
+					"url_name":"Carnosaur_Massive_Jaws",
 					"type":"melee",
 					"range":"2",
 					"attacks":"*",
@@ -97,6 +100,7 @@
 			"name":"Prophet of Sotek",
 			"url_name":"Prophet_of_Sotek",
       "rank":"General",
+      "race": "Lizardmen",
       "wounds": "5",
 			"movement":"8",
 			"bravery":"10",
@@ -123,13 +127,12 @@
 					"damage": "1"
 				}
 			]
-		}
-	],
-	"leaders": [
+		},
 		{
 			"name":"Saurus OldBlood",
 			"url_name":"Saurus_OldBlood",
       "rank":"leader",
+      "race": "Lizardmen",
 			"wounds": 7,
 			"movement": 5,
 			"bravery": 10,
@@ -171,6 +174,7 @@
 		"name":"Saurus OldBlood on Cold One",
 		"url_name":"Saurus_OldBlood_on_Cold_One",
       "rank":"leader",
+      "race": "Lizardmen",
       "wounds": 7,
 			"movement": 10,
 			"bravery": 10,
@@ -210,6 +214,7 @@
 		"name":"Scar Vetran with Battle Standard",
 		"url_name":"Scar_Vetran_with_Battle_Standard",
       "rank":"leader",
+      "race": "Lizardmen",
       "wounds": 6,
 			"movement": 5,
 			"bravery": 10,
@@ -235,13 +240,12 @@
 					"damage": "1"
 				}
 			]
-		}
-	],
-	"basic": [
+		},
 		{
 		"name":"Saurus Warriors",
 		"url_name":"Saurus_Warriors",
     "rank":"infantry",
+    "race": "Lizardmen",
     "wounds": 1,
 			"movement": 5,
 			"bravery": 10,
@@ -281,6 +285,7 @@
 		"name":"Temple Gaurd",
 		"url_name":"Temple_Gaurd",
     "rank":"infantry",
+    "race": "Lizardmen",
     "wounds": 1,
 			"movement": 5,
 			"bravery": 10,
@@ -311,6 +316,7 @@
 		"name":"Saurus Calvalry",
 		"url_name":"Saurus_Calvalry",
     "rank":"infantry",
+    "race": "Lizardmen",
     "wounds": 2,
 			"movement": 7,
 			"bravery": 10,
@@ -350,6 +356,7 @@
 		"name":"Skinks",
 		"url_name":"Skinks",
     "rank":"infantry" ,
+    "race": "Lizardmen",
     "wounds": 6,
 			"movement": 5,
 			"bravery": 10,
