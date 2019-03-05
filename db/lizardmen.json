@@ -80,7 +80,7 @@
 					"type":"melee",
 					"range":"2",
 					"attacks":"2",
-					"to_hit": "3+",
+					"to_hit": "*",
 					"to_wound": "3+",
 					"damage": "2"
 				},
@@ -160,7 +160,7 @@
 				},
 				{
 					"name":"Fearsome Jaws and Stardrake Sheild",
-					"url_name":"Fearsome Jaws and Stardrake Sheild",
+					"url_name":"Fearsome_Jaws_and_Stardrake_Sheild",
 					"type":"melee",
 					"range":"1",
 					"attacks":"1",
@@ -332,6 +332,15 @@
 					"to_wound": "3+",
 					"damage": "1"
 				},{
+					"name":"Celestite Blade",
+					"url_name":"Celestite_Blade",
+					"type":"melee",
+					"range":"1",
+					"attacks":"1",
+					"to_hit": "4+",
+					"to_wound": "3+",
+					"damage": "1"
+				},{
 					"name":"Fearsome Jaws and Stardrake Sheild",
 					"url_name":"Fearsome_Jaws_and_Stardrake_Sheild",
 					"type":"melee",
@@ -353,14 +362,14 @@
 			]
 		},
 		{
-		"name":"Skinks",
-		"url_name":"Skinks",
-    "rank":"infantry" ,
-    "race": "Lizardmen",
-    "wounds": 6,
-			"movement": 5,
-			"bravery": 10,
-			"save":"4+",
+		  "name":"Skinks",
+		  "url_name":"Skinks",
+      "rank":"infantry" ,
+      "race": "Lizardmen",
+      "wounds": "1",
+			"movement": "8",
+			"bravery": "10",
+			"save":"6+",
 			"weapons":[
 				{
 					"name":"Meteoric Javelin",
@@ -370,6 +379,16 @@
 					"attacks":"1",
 					"to_hit": "5+",
 					"to_wound": "4+",
+					"damage": "1"
+				},
+				{
+					"name":"Meteoric Javelin",
+					"url_name":"Meteoric_Javelin",
+					"type":"melee",
+					"range":"1",
+					"attacks":"1",
+					"to_hit": "6+",
+					"to_wound": "5+",
 					"damage": "1"
 				},
 				{
@@ -391,8 +410,166 @@
 					"to_hit": "5+",
 					"to_wound": "4+",
 					"damage": "1"
+				},
+				{
+					"name":"Boltspitter",
+					"url_name":"Boltspitter",
+					"type":"melee",
+					"range":"1",
+					"attacks":"1",
+					"to_hit": "5+",
+					"to_wound": "6+",
+					"damage": "1"
 				}
 			]
-		}
+    },
+    {
+      "name":"Salamanders",
+      "url_name":"Salamanders",
+      "rank":"artillery" ,
+      "race": "Lizardmen",
+      "wounds": "3",
+			"movement": "8",
+			"bravery": "10",
+			"save":"4+",
+			"weapons":[
+				{
+					"name":"Stream of Fire",
+					"url_name":"Stream_of_Fire",
+					"type":"missle",
+					"range":"8",
+					"attacks":"1",
+					"to_hit": "3+",
+					"to_wound": "3+",
+					"damage": "D6"
+				},
+				{
+					"name":"Corrosive Bite",
+					"url_name":"Corrosive_Bite",
+					"type":"melee",
+					"range":"1",
+					"attacks":"3",
+					"to_hit": "3+",
+					"to_wound": "3+",
+					"damage": "1"
+				}
+			]
+    },
+    {
+      "name":"Razordons",
+      "url_name":"Razordons",
+      "rank":"artillery" ,
+      "race": "Lizardmen",
+      "wounds": "3",
+			"movement": "8",
+			"bravery": "10",
+			"save":"4+",
+			"weapons":[
+				{
+					"name":"Volley of Spikes",
+					"url_name":"Volley_of_Spikes",
+					"type":"missle",
+					"range":"12",
+					"attacks":"2D6",
+					"to_hit": "3+",
+					"to_wound": "4+",
+					"damage": "1"
+				},
+				{
+					"name":"Fierce Bite and Spiked Tail",
+					"url_name":"Fierce_Bite_and_Spiked_Tail",
+					"type":"melee",
+					"range":"1",
+					"attacks":"3",
+					"to_hit": "4+",
+					"to_wound": "3+",
+					"damage": "1"
+				}
+			]
+    },
+    {
+      "name":"Ripperdactyl Riders",
+      "url_name":"Ripperdactyl_Riders",
+      "rank":"infantry" ,
+      "race": "Lizardmen",
+      "wounds": "3",
+			"movement": "14",
+			"bravery": "10",
+			"save":"5+",
+			"weapons":[
+				{
+					"name":"Moonstone War-spear",
+					"url_name":"Moonstone_War-spear",
+					"type":"melee",
+					"range":"2",
+					"attacks":"1",
+					"to_hit": "4+",
+					"to_wound": "4+",
+					"damage": "1"
+				},
+				{
+					"name":"Ripperdactyl’s Slashing Claws",
+					"url_name":"Ripperdactyls_Slashing_Claws",
+					"type":"melee",
+					"range":"1",
+					"attacks":"3",
+					"to_hit": "3+",
+					"to_wound": "3+",
+					"damage": "1"
+				},
+				{
+					"name":"Ripperdactyl’s Vicious Beak",
+					"url_name":"Ripperdactyls_Vicious_Beak",
+					"type":"melee",
+					"range":"1",
+					"attacks":"1",
+					"to_hit": "4+",
+					"to_wound": "3+",
+					"damage": "1"
+				}
+			]
+    },{
+      "name":"Kroxigor",
+      "url_name":"Kroxigor",
+      "rank":"infantry" ,
+      "race": "Lizardmen",
+      "wounds": "4",
+			"movement": "8",
+			"bravery": "10",
+			"save":"4+",
+			"weapons":[
+				{
+					"name":"Drakebite Maul",
+					"url_name":"Drakebite_Maul",
+					"type":"melee",
+					"range":"2",
+					"attacks":"4",
+					"to_hit": "4+",
+					"to_wound": "3+",
+					"damage": "2"
+				},
+				{
+					"name":"Moon Hammer",
+					"url_name":"Moon_Hammer",
+					"type":"melee",
+					"range":"2",
+					"attacks":"-",
+					"to_hit": "4+",
+					"to_wound": "3+",
+					"damage": "2"
+				},
+				{
+					"name":"Vice-like Jaws",
+					"url_name":"vice-like_Jaws",
+					"type":"melee",
+					"range":"1",
+					"attacks":"1",
+					"to_hit": "4+",
+					"to_wound": "3+",
+					"damage": "1"
+				}
+			]
+    }
+
 	]
 }

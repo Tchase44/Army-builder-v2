@@ -47,6 +47,29 @@
         </tbody>
       </table>
     </div>
+<br>
+    <div v-if="damage_table">
+      Damage Table
+      <table>
+        <thead>
+          <tr>
+            <td>Wounds Suffered</td>
+            <td>Move in inches</td>
+            <td>{{damage_table.rows[0].attack1_name}}</td>
+            <td>{{damage_table.rows[0].attack2_name}}</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="row in damage_table.rows" v-bind:key="row.id">
+            <td>{{row.wounds_suffered}}</td>
+            <td>{{row.move}}</td>
+            <td>{{row.attack1_value}}</td>
+            <td>{{row.attack2_value}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
 
     <h4>Errors</h4>
     <div>{{errors}}</div>
@@ -67,12 +90,13 @@ export default {
       movement: "",
       bravery: "",
       ssave: "",
+      damage_table: null,
       params_name: this.$props.url_name,
       errors: []
     }
   },
 	mounted() {
-    axios.get(`http://localhost:8000/api/lizardmen/${this.params_name}.json`).then(res => {
+    axios.get(`http://localhost:8001/api/lizardmen/${this.params_name}`).then(res => {
       this.unit = res.data
       let unit = res.data
       this.name = unit.name
@@ -80,10 +104,20 @@ export default {
       this.movement = unit.movement
       this.bravery = unit.bravery
       this.ssave = unit.ssave
-      console.log(this.unit)
+      // console.log(this.unit)
+    })
+    .catch(e => {
+      this.errors.push(e)
+    })
+    axios.get(`http://localhost:8001/api/lizardmen/damage_table/${this.params_name}`).then(res => {
+      this.damage_table = res.data
+      console.log(damage_table)
+    }).catch(e => {
+      this.errors.push(e)
     })
   },
   methods: {
+
   }
 }
 </script>

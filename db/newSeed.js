@@ -51,8 +51,6 @@ console.log('Primed')
 let Units = mongoose.model("Unit")
 let Weapons = mongoose.model("Weapon")
 
-// create collections for units, weapons
-
 mongoose.connect('mongodb://localhost/lizardmen')
 Units.remove({}).then(() => {
   allunits.forEach((unit)=>{

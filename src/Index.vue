@@ -42,7 +42,7 @@
 			}
 		},
 		created() {
-			axios.get(`http://localhost:8000/api/lizardmen.json`)
+			axios.get(`http://localhost:8001/api/lizardmen`)
 			.then(response => {
 				this.apiArmy = response.data
 				this.heroes = []
