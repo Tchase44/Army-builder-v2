@@ -1,16 +1,20 @@
 <template>
 	<main class="main">
-		<div>
-			<div @click="changeShow(all)" >All</div>
-			<div @click="changeShow(heroes)" >Heroes</div>
-			<div @click="changeShow(leaders)" >Leaders</div>
-			<div @click="changeShow(basic)" >Units</div>
-		</div>
+		<dvi class="title-bar">
+			<div @click="changeShow(all)"
+        class="nav-item">All</div>
+			<div @click="changeShow(heroes)"
+        class="nav-item">Heroes</div>
+			<div @click="changeShow(leaders)"
+        class="nav-item">Leaders</div>
+			<div @click="changeShow(basic)"
+        class="nav-item">Infantry</div>
+		</dvi>
 		<div class="contain">
 		<div v-for="person in current"
-				 class="boxes"
+				 class="boxes card"
 				 :key="person.name" >
-			<div class="model">
+			<div class="model card-section">
 				<router-link :to="{ path: person.url_name }" v-bind:name="person.url_name">
 					<h3>{{person.name}}</h3>
 					<p>Health: {{person.wounds}}</p>
@@ -25,6 +29,9 @@
 </template>
 
 <script>
+  /********************************************************************************************************************
+  ** SCRIPT
+  ********************************************************************************************************************/
 	// import army from "./assets/lizardmen"
 	import axios from "axios"
 
@@ -51,22 +58,23 @@
 				this.all = this.apiArmy
 				this.apiArmy.forEach(unit => {
 					switch (unit.rank) {
-						case "hero":
+						case "General":
 							this.heroes.push(unit)
 							break;
 						case "leader":
 							this.leaders.push(unit)
 							break;
-						case "basic":
+						case "infantry":
 							this.basic.push(unit)
 							break;
 					}
-				});
+        });
+        this.current = this.all
 			})
 			.catch(e => {
 				this.errors.push(e)
       })
-		},
+    },
 		methods:{
 			changeShow(value){
 				this.current = value
@@ -76,23 +84,57 @@
 </script>
 
 <style scoped>
+/**********************************************************************************************************************
+** STYLES
+**********************************************************************************************************************/
 	main{
-		text-align: center;
-	}
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .nav-item{
+    width: 20%;
+    margin-left: 1%;
+    text-align: center;
+    cursor: pointer;
+  }
+  .nav-item:hover{
+    background-color: rgb(46, 53, 49);
+  }
+
 	a{
 		text-decoration: none;
 		color: #000;
 	}
 	.contain{
 		width: 100%;
-		padding: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
 	}
 	.boxes{
-		text-align: center;
-		border:1px solid black;
-		display: inline-block;
-		margin: 5px;
-		padding: 2px;
-		vertical-align: top;
-	}
+    min-width: 195px;
+  }
+
+  @media only screen and (min-width: 500px){
+    .contain{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media only screen and (min-width: 906px){
+    .contain{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  @media only screen and (min-width: 1250px){
+    .contain{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
 </style>

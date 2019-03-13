@@ -22,6 +22,23 @@ app.all('/*', function(req, res, next) {
   next();
  });
 
+//* get seleted fields from doc
+// User.findById(id)
+//     .select("name movement")
+//     .exec(function (err, user) {
+//       var item = {
+//           name: user.name,
+//           move: user.movement
+//       }
+//       res.json(item);
+//     })
+//* get all fields minus specified
+// User.findById(id).select("-move -weapons")
+
+
+/************
+ * API Routes
+*************/
 // Units
 app.get("/api/lizardmen", (req,res)=>{
 	Unit.find({}).then(function (data) {
@@ -29,11 +46,6 @@ app.get("/api/lizardmen", (req,res)=>{
 	})
 })
 
-// app.get("/api/lizardmen/:url_name.json", (req,res)=>{
-// 	Unit.findOne({url_name: req.params.url_name}).then(function (data) {
-//     res.json(data)
-// 	})
-// })
 app.get("/api/lizardmen/:url_name", (req,res)=>{
 	Unit.findOne({url_name: req.params.url_name}).then(function (data) {
     Weapon.find({unit_id: data._id}).then(function(wdata){
@@ -59,7 +71,7 @@ app.get("/api/lizardmen/rank/:rank", (req,res)=>{
 	})
 })
 
-// Weapaons
+// Weapons
 app.get("/api/lizardmen/weapons", (req,res)=>{
 	Weapon.find({}).then(function (data) {
 		res.json(data)

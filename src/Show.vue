@@ -77,6 +77,9 @@
 </template>
 
 <script>
+/**********************************************************
+ * *Script
+***********************************************************/
 import axios from "axios"
 
 export default {
@@ -123,6 +126,9 @@ export default {
 </script>
 
 <style scoped>
+/**********************************************************
+ * *STYLE
+***********************************************************/
 div{
   display: inline-block;
 }
@@ -156,6 +162,7 @@ div{
 /* interrior circle */
 .stat{
   font-weight: bolder;
+  font-size: 120%;
 }
 .value{
   font-size: 140%;
@@ -192,22 +199,22 @@ div{
 /* stats values */
 .health .value {
   position: relative;
-  top:30px;
+  top:20px;
   left: 20px;
 }
 .move .value {
   position: relative;
-  top: 30px;
+  top: 20px;
   right:20px;
 }
 .brave .value {
   position: relative;
-  bottom:20px;
+  bottom:30px;
   left:20px;
 }
 .ssave .value {
   position: relative;
-  bottom: 20px;
+  bottom: 30px;
   right: 20px;
 }
 </style>
