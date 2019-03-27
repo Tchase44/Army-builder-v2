@@ -62,9 +62,12 @@
 				this.slides = [last].concat(this.slides)
 			},
 			autoNext () {
-				setInterval(function(){this.next()},2000)
+				setInterval(()=>{this.next()},5000)
 			}
-		}
+    },
+    created() {
+      this.autoNext()
+    }
 	}
 </script>
 
@@ -106,4 +109,7 @@
 	img{
 		width: 100%;
 	}
+  .carousel-controls_button{
+    font-size: 150%;
+  }
 </style>

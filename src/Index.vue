@@ -1,6 +1,6 @@
 <template>
 	<main class="main">
-		<dvi class="title-bar">
+		<div class="title-bar">
 			<div @click="changeShow(all)"
         class="nav-item">All</div>
 			<div @click="changeShow(heroes)"
@@ -9,7 +9,7 @@
         class="nav-item">Leaders</div>
 			<div @click="changeShow(basic)"
         class="nav-item">Infantry</div>
-		</dvi>
+		</div>
 		<div class="contain">
 		<div v-for="person in current"
 				 class="boxes card"
