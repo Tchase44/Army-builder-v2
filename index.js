@@ -3,6 +3,7 @@ const express = require("express")
 const mongoose = require("./db/connection.js")
 // const mongoose = require("./db/setupDB")
 // mongoose.connect("mongodb://localhost/lizardmen2")
+const parser = require("body-parser")
 
 let app = express()
 
@@ -13,7 +14,8 @@ let DamageTable = mongoose.model("DamageTable")
 
 
 app.set("port", process.env.PORT || 8001 )
-
+app.use(parser.json({extended:true}))
+app.use(parser.urlencoded({ extended: true }))
 // app.use("/assets",express.static("src"))
 
 app.all('/*', function(req, res, next) {
@@ -83,6 +85,27 @@ app.get("/api/lizardmen/weapons/:url_name", (req,res)=>{
 	})
 })
 
+// app.post("/api/lizardmen/new", (req, res)=>{
+  // if( req.body.keys != "" ){update}else{fail}
+  // if( req.body.move included in vaild move arry ){update}else{fail}
+// 	Unit.create(req.body)
+// 		.then((newUnit)=>{
+// 			console.log(req.body )
+// 			res.json(newUnit)
+// 		})
+// })
+
+// app.put("/api/lizardmen/:url_name/update", (req, res)=>{
+// 	Unit.findOneAndUpdate({_id: req.params.id}, req.body, {new: true})
+// 		.then((unit)=>{
+// 				res.json(unit)
+// 		})
+// })
+
+
+
+
+
 // app.get("/*", (req, res)=>{
 //   res.sendFile(__dirname + "/index.html");
 // });
@@ -90,3 +113,35 @@ app.get("/api/lizardmen/weapons/:url_name", (req,res)=>{
 app.listen(app.get("port"),function(){
 	console.log("Lord Korak awaits on port 8001")
 })
+
+// add sub doc
+// function addItem(resturant, item){
+//   Restaurant.findOne({name: resturant}, function(err, docs){
+//     docs.items.push(new MenuItem({
+//     											title: item
+//     										}))
+//     docs.save(function(err, results){
+//       if(err){
+//         console.log(err)
+//       }
+//       else{
+//         console.log(results);
+//       }
+//     })
+//   });
+// }
+
+// // Remove sub document
+// function removeItem(resturant, item){
+//   Restaurant.findOneAndUpdate({name: resturant}, {
+//     $pull: { items: {title: item} }
+//   },
+//   {new: true}, function(err, docs){
+//     if(err){
+//       console.log(err);
+//     }
+//     else{
+//       console.log(docs);
+//     }
+//   });
+// }
