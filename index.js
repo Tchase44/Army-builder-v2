@@ -66,6 +66,13 @@ app.get("/api/lizardmen/damage_table/:url_name", (req,res)=>{
 	})
 })
 
+app.put("/api/lizardmen/:url_name/update", (req, res)=>{
+	Unit.findOneAndUpdate({url_name: req.params.url_name}, req.body, {new: true})
+		.then((unit)=>{
+				res.json(unit)
+		})
+})
+
 // Ranks
 app.get("/api/lizardmen/rank/:rank", (req,res)=>{
 	Unit.find({rank: req.params.rank}).then(function (data) {
@@ -95,12 +102,7 @@ app.get("/api/lizardmen/weapons/:url_name", (req,res)=>{
 // 		})
 // })
 
-// app.put("/api/lizardmen/:url_name/update", (req, res)=>{
-// 	Unit.findOneAndUpdate({_id: req.params.id}, req.body, {new: true})
-// 		.then((unit)=>{
-// 				res.json(unit)
-// 		})
-// })
+
 
 
 

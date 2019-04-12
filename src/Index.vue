@@ -33,7 +33,7 @@
   ** SCRIPT
   ********************************************************************************************************************/
 	// import army from "./assets/lizardmen"
-	import axios from "axios"
+  import axios from "axios"
 
 	export default {
 		name: "units",
@@ -47,7 +47,7 @@
 				current: null,
 				errors: []
 			}
-		},
+    },
 		created() {
 			axios.get(`http://localhost:8001/api/lizardmen`)
 			.then(response => {

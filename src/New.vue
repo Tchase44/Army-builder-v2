@@ -35,6 +35,8 @@
         name="ssave"
         v-model.trim="ssave"
         placeholder="3">
+
+      <input type="submit" value="Create">
     </form>
 	</main>
 </template>

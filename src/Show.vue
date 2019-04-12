@@ -1,6 +1,6 @@
 <template>
   <div class="show">
-    <h3>{{name}}</h3>
+    <h1>{{name}}</h1>
       <div class="box">
         <div class="health">
           <span class="stat">Health:</span><br>
@@ -21,17 +21,17 @@
       </div>
 
     <h4>Weapons</h4>
-    <div>
+    <div class="weapons-table">
       <table>
         <thead>
           <tr>
-            <td>Name</td>
-            <td>combat style</td>
-            <td>range(inches)</td>
-            <td>attacks</td>
-            <td>to hit</td>
-            <td>to wound</td>
-            <td>damage</td>
+            <td class="tilt">Name</td>
+            <td class="tilt">combat style</td>
+            <td class="tilt">range(inches)</td>
+            <td class="tilt">attacks</td>
+            <td class="tilt">to hit</td>
+            <td class="tilt">to wound</td>
+            <td class="tilt">damage</td>
           </tr>
         </thead>
         <tbody>
@@ -47,7 +47,7 @@
         </tbody>
       </table>
     </div>
-<br>
+  <br>
     <div v-if="damage_table">
       Damage Table
       <table>
@@ -71,6 +71,14 @@
 
     </div>
 
+    <unit-form v-bind:unit="{
+      name: name,
+      url_name: params_name,
+      wounds: wounds,
+      movement: movement,
+      bravery: bravery,
+      ssave: ssave}"></unit-form>
+
     <h4>Errors</h4>
     <div>{{errors}}</div>
   </div>
@@ -81,6 +89,7 @@
  * *Script
 ***********************************************************/
 import axios from "axios"
+import UnitForm from "./UnitForm.vue"
 
 export default {
   name: "Show",
@@ -97,6 +106,9 @@ export default {
       params_name: this.$props.url_name,
       errors: []
     }
+  },
+  components:{
+    UnitForm
   },
 	mounted() {
     axios.get(`http://localhost:8001/api/lizardmen/${this.params_name}`).then(res => {
@@ -132,89 +144,126 @@ export default {
 div{
   display: inline-block;
 }
-/* circle stats */
+.show h1{
+  font-size: 200%;
+}
 .box{
+  width: 100vw;
   display: grid;
-  width: 200px;
-  height: 200px;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
+  /* grid-gap: 5px; */
 }
 .box div{
-  border: 1px solid #000;
   text-align: center;
-}
-.health{
-  border-radius: 100px 0 0 0;
-}
-
-.move{
-  border-radius: 0 100px 0 0;
-}
-
-.brave{
-  border-radius: 0 0 0 100px;
-}
-
-.ssave{
-  border-radius: 0 0 100px 0;
-}
-/* interrior circle */
-.stat{
-  font-weight: bolder;
-  font-size: 120%;
+  border: 2px solid black;
 }
 .value{
-  font-size: 140%;
+  font-size: 185%;
 }
-/* labels */
-.health .stat {
-  display: block;
-  transform: rotate(-50deg);
-  position: relative;
-  top:30px;
-  right:10px;
+.weapons-table thead tr{
+  height: 100px;
+  background-color: antiquewhite;
 }
-.move .stat {
-  display: block;
-  transform: rotate(45deg);
-  position: relative;
-  top:35px;
-  left:5px;
+.tilt{
+  transform: rotate(-60deg);
+  width: 160px;
+  padding: 0px;
 }
-.brave .stat {
-  display: block;
-  transform: rotate(-130deg);
-  position: relative;
-  top:45px;
-  right:10px;
+@media only screen and (min-width: 500px){
+  /* circle stats */
+  .box{
+    display: grid;
+    width: 200px;
+    height: 200px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .box div{
+    border: 1px solid #000;
+    text-align: center;
+  }
+  .health{
+    border-radius: 100px 0 0 0;
+  }
+
+  .move{
+    border-radius: 0 100px 0 0;
+  }
+
+  .brave{
+    border-radius: 0 0 0 100px;
+  }
+
+  .ssave{
+    border-radius: 0 0 100px 0;
+  }
+  /* interrior circle */
+  .stat{
+    font-weight: bolder;
+    font-size: 120%;
+  }
+  .value{
+    font-size: 140%;
+  }
+  /* labels */
+  .health .stat {
+    display: block;
+    transform: rotate(-50deg);
+    position: relative;
+    top:30px;
+    right:10px;
+  }
+  .move .stat {
+    display: block;
+    transform: rotate(45deg);
+    position: relative;
+    top:35px;
+    left:5px;
+  }
+  .brave .stat {
+    display: block;
+    transform: rotate(-130deg);
+    position: relative;
+    top:45px;
+    right:10px;
+  }
+  .ssave .stat {
+    display: block;
+    transform: rotate(130deg);
+    position: relative;
+    top:50px;
+    left:10px;
+  }
+  /* stats values */
+  .health .value {
+    position: relative;
+    top:20px;
+    left: 20px;
+  }
+  .move .value {
+    position: relative;
+    top: 20px;
+    right:20px;
+  }
+  .brave .value {
+    position: relative;
+    bottom:30px;
+    left:20px;
+  }
+  .ssave .value {
+    position: relative;
+    bottom: 30px;
+    right: 20px;
+  }
 }
-.ssave .stat {
-  display: block;
-  transform: rotate(130deg);
-  position: relative;
-  top:50px;
-  left:10px;
-}
-/* stats values */
-.health .value {
-  position: relative;
-  top:20px;
-  left: 20px;
-}
-.move .value {
-  position: relative;
-  top: 20px;
-  right:20px;
-}
-.brave .value {
-  position: relative;
-  bottom:30px;
-  left:20px;
-}
-.ssave .value {
-  position: relative;
-  bottom: 30px;
-  right: 20px;
+@media only screen and (min-width: 600px){
+  .weapons-table thead tr{
+  height: 50px;
+  background-color: antiquewhite;
+  }
+  .tilt{
+  transform: rotate(0deg);
+  }
 }
 </style>
